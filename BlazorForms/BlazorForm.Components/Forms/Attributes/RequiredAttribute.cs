@@ -29,6 +29,9 @@ namespace BlazorForm.Components.Forms.Attributes
             if (double.TryParse(value.ToString(), out var numericValue) && numericValue == 0)
                 return ErrorMessage;
 
+            if (value is bool && !(bool)value)
+                return ErrorMessage;
+
             return null;
         }
     }
