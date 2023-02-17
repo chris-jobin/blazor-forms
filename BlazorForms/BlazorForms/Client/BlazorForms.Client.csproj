@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\BlazorForm.Components\BlazorForm.Components.csproj" />
     <ProjectReference Include="..\Shared\BlazorForms.Shared.csproj" />
   </ItemGroup>
 

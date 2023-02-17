@@ -13,4 +13,8 @@
   <ItemGroup>
     <Folder Include="Models\" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\BlazorForm.Components\BlazorForm.Components.csproj" />
+  </ItemGroup>
 </Project>
