@@ -1,0 +1,47 @@
+﻿@using BlazorForm.Components.Forms
+@using BlazorForms.Shared.Models;
+
+@if (Model is not null)
+{
+    <Form @ref="FormRef" Model="Model">
+        <FormRow For="@(() => Model.LastName)">
+            <input type="text" class="form-control" @bind-value="Model.LastName" />
+            <FormValidationMessage For="@(() => Model.LastName)" />
+        </FormRow>
+        <FormRow For="@(() => Model.FirstName)">
+            <input type="text" class="form-control" @bind-value="Model.FirstName" />
+            <FormValidationMessage For="@(() => Model.FirstName)" />
+        </FormRow>
+        <FormRow For="@(() => Model.Age)">
+            <input type="number" class="form-control" @bind-value="Model.Age" />
+            <FormValidationMessage For="@(() => Model.Age)" />
+        </FormRow>
+        <FormRow For="@(() => Model.NetWorth)">
+            <input type="number" class="form-control" @bind-value="Model.NetWorth" />
+            <FormValidationMessage For="@(() => Model.NetWorth)" />
+        </FormRow>
+        <FormRow For="@(() => Model.Address)">
+            <input type="text" class="form-control" @bind-value="Model.Address" />
+            <FormValidationMessage For="@(() => Model.Address)" />
+        </FormRow>
+    </Form>
+    <ContactInformationForm @ref="ContactInformationFormRef" Model="Model.ContactInformation" />
+}
+
+@code {
+    [Parameter]
+    public ContactModel? Model { get; set; }
+    public Form? FormRef { get; set; }
+    public ContactInformationForm? ContactInformationFormRef { get; set; }
+
+    public bool Validate()
+    {
+        if (FormRef is null || ContactInformationFormRef is null)
+            return false;
+
+        var isvalid = true;
+        isvalid = FormRef.Validate() && isvalid;
+        isvalid = ContactInformationFormRef.Validate() && isvalid;
+        return isvalid;
+    }
+}

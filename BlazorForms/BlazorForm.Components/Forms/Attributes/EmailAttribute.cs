@@ -11,7 +11,7 @@ namespace BlazorForm.Components.Forms.Attributes
     public class EmailAttribute : Attribute, IFormAttribute
     {
         public string ErrorMessage { get; set; }
-        public string Pattern { get; set; } = "[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,4}"; // super basic email regex to keep it short.
+        public string Pattern { get; set; } = "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"; // super basic email regex to keep it short.
 
         public EmailAttribute() : this("Invalid email format.") 
         { }

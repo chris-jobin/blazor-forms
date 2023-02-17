@@ -1,0 +1,36 @@
+﻿@using BlazorForm.Components.Forms;
+@using BlazorForms.Shared.Models;
+
+@if (Model is not null)
+{
+    <Form @ref="FormRef" Model="Model">
+        <FormRow For="@(() => Model.CellPhone)">
+            <input type="text" class="form-control" @bind-value="Model.CellPhone" />
+            <FormValidationMessage For="@(() => Model.CellPhone)" />
+            <FormValidationMessage For="@(() => Model._PhoneNumber)" />
+        </FormRow>
+        <FormRow For="@(() => Model.WorkPhone)">
+            <input type="text" class="form-control" @bind-value="Model.WorkPhone" />
+            <FormValidationMessage For="@(() => Model.WorkPhone)" />
+            <FormValidationMessage For="@(() => Model._PhoneNumber)" />
+        </FormRow>
+        <FormRow For="@(() => Model.Email)">
+            <input type="text" class="form-control" @bind-value="Model.Email" />
+            <FormValidationMessage For="@(() => Model.Email)" />
+        </FormRow>
+    </Form>
+}
+
+@code {
+    [Parameter]
+    public ContactInformationModel? Model { get; set; }
+    public Form? FormRef { get; set; }
+
+    public bool Validate()
+    {
+        if (FormRef is null)
+            return false;
+
+        return FormRef.Validate();
+    }
+}

@@ -18,7 +18,7 @@ namespace BlazorForm.Components.Forms.Attributes
         { }
         public NumberAttribute(string errorMessage, double max = 0, double min = 0)
         {
-            if (min > Max)
+            if (min != 0 && max != 0 && min > max)
                 throw new ArgumentOutOfRangeException("Min cannot be bigger than Max.");
 
             ErrorMessage = errorMessage;
@@ -35,9 +35,9 @@ namespace BlazorForm.Components.Forms.Attributes
 
             if (isNumeric)
             {
-                if (numericValue > Max)
+                if (Max != 0 && numericValue > Max)
                     return ErrorMessage;
-                if (numericValue < Min) 
+                if (Min != 0 && numericValue < Min) 
                     return ErrorMessage;
             }
 

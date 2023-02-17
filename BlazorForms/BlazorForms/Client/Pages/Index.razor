@@ -1,7 +1,12 @@
 ﻿@page "/"
+@using BlazorForms.Client.Components
 
 <PageTitle>Index</PageTitle>
 
 <h1>Blazor Forms</h1>
 
 Welcome to your new app.
+
+<ContactForm @ref="ContactFormRef" Model="ContactModel"/>
+
+<button class="btn btn-primary" @onclick="@(() => ContactFormRef.Validate())">Submit</button>

@@ -24,7 +24,7 @@ namespace BlazorForm.Components.Forms.Attributes
                 throw new ArgumentOutOfRangeException("MinLength cannot be negative.");
             if (length < 0)
                 throw new ArgumentOutOfRangeException("Length cannot be negative.");
-            if (min > max)
+            if (min != 0 && max != 0 && min > max)
                 throw new ArgumentOutOfRangeException("MinLength cannot be bigger than MaxLength.");
             if (length > 0 && (max > 0 || min > 0))
                 throw new Exception("Cannot specify MaxLength or MinLength with Length.");
