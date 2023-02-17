@@ -8,6 +8,7 @@ namespace BlazorForm.Components.Forms.Attributes
 {
     public interface IFormAttribute
     {
+        public string ErrorMessage { get; set; }
         public string? GetErrorMessage(object? value);
     }
 }
