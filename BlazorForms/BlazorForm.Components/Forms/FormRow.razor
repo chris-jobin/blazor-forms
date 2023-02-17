@@ -1,0 +1,13 @@
+﻿<div class="row mb-3">
+    @if (For != null)
+    {
+        <Label For="For" CSSClass="@($"col-sm-{LabelWidth} col-form-label")" />
+    }
+    else
+    {
+        <label class="@($"fw-bold col-sm-{LabelWidth} col-form-label")">@Label</label>
+    }
+    <div class="col-sm-@(12 - LabelWidth)">
+        @ChildContent
+    </div>
+</div>
