@@ -14,11 +14,9 @@ namespace BlazorForm.Components.Forms.Attributes
         public int MinLength { get; set; }
         public int Length { get; set; }
 
-        public StringLengthAttribute(int max) : this(max, 0, 0)
-        { }
         public StringLengthAttribute(int max = 0, int min = 0, int length = 0) : this("Invalid length.", max, min, length)
         { }
-        public StringLengthAttribute(string errorMessage, int max, int min, int length) 
+        public StringLengthAttribute(string errorMessage, int max = 0, int min = 0, int length = 0) 
         {
             if (max < 0)
                 throw new ArgumentOutOfRangeException("MaxLength cannot be negative.");

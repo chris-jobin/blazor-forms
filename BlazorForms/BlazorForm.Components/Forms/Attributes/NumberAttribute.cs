@@ -11,14 +11,12 @@ namespace BlazorForm.Components.Forms.Attributes
     public class NumberAttribute : Attribute, IFormAttribute
     {
         public string ErrorMessage { get; set; }
-        public int Max { get; set; }
-        public int Min { get; set; }
+        public double Max { get; set; }
+        public double Min { get; set; }
 
-        public NumberAttribute(int max) : this(max, 0)
+        public NumberAttribute(double max = 0, double min = 0) : this("Invalid range.", max, min)
         { }
-        public NumberAttribute(int max = 0, int min = 0) : this("Invalid range.", max, min)
-        { }
-        public NumberAttribute(string errorMessage, int max, int min)
+        public NumberAttribute(string errorMessage, double max = 0, double min = 0)
         {
             if (min > Max)
                 throw new ArgumentOutOfRangeException("Min cannot be bigger than Max.");

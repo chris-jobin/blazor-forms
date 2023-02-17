@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 namespace BlazorForm.Components.Forms.Attributes
 {
     [AttributeUsage(AttributeTargets.Property)]
-    public class PhoneNumberAttibute : Attribute, IFormAttribute
+    public class PhoneNumberAttribute : Attribute, IFormAttribute
     {
         public string ErrorMessage { get; set; }
         public string Pattern { get; set; } = "^(\\(\\d{3}\\)|\\d{3})-?\\d{3}-?\\d{4}$"; // super basic phone number regex to keep it short.
 
-        public PhoneNumberAttibute() : this("Invalid phone number format.") 
+        public PhoneNumberAttribute() : this("Invalid phone number format.") 
         { }
-        public PhoneNumberAttibute(string errorMessage)
+        public PhoneNumberAttribute(string errorMessage)
         {
             ErrorMessage = errorMessage;
         }
