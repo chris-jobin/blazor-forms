@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorForms.Client", "Blazo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorForms.Shared", "BlazorForms\Shared\BlazorForms.Shared.csproj", "{E5E8EA5C-F950-4297-B691-49A5814E5D81}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorForm.Components", "BlazorForm.Components\BlazorForm.Components.csproj", "{0DC0B9B3-DA60-4F98-8A2E-B6171267288B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{E5E8EA5C-F950-4297-B691-49A5814E5D81}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E5E8EA5C-F950-4297-B691-49A5814E5D81}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E5E8EA5C-F950-4297-B691-49A5814E5D81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DC0B9B3-DA60-4F98-8A2E-B6171267288B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DC0B9B3-DA60-4F98-8A2E-B6171267288B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DC0B9B3-DA60-4F98-8A2E-B6171267288B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DC0B9B3-DA60-4F98-8A2E-B6171267288B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
