@@ -1,0 +1,12 @@
+﻿
+@if (Model is not null && Properties is not null)
+{
+    <Form Model="Model">
+        @foreach (var property in Properties)
+        {
+            <FormRow Label="@(GetDisplayName(property))">
+
+            </FormRow>
+        }
+    </Form>
+}

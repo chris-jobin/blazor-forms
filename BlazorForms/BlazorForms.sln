@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorForms.Server", "BlazorForms\Server\BlazorForms.Server.csproj", "{DCBA839B-576D-4D85-8267-ADB0AD8078FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorForms.Server", "BlazorForms\Server\BlazorForms.Server.csproj", "{DCBA839B-576D-4D85-8267-ADB0AD8078FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorForms.Client", "BlazorForms\Client\BlazorForms.Client.csproj", "{CF65F983-DF11-4421-BF4F-8BA7A3C7358A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorForms.Client", "BlazorForms\Client\BlazorForms.Client.csproj", "{CF65F983-DF11-4421-BF4F-8BA7A3C7358A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorForms.Shared", "BlazorForms\Shared\BlazorForms.Shared.csproj", "{E5E8EA5C-F950-4297-B691-49A5814E5D81}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorForms.Shared", "BlazorForms\Shared\BlazorForms.Shared.csproj", "{E5E8EA5C-F950-4297-B691-49A5814E5D81}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorForm.Components", "BlazorForm.Components\BlazorForm.Components.csproj", "{0DC0B9B3-DA60-4F98-8A2E-B6171267288B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorForm.Components", "BlazorForm.Components\BlazorForm.Components.csproj", "{0DC0B9B3-DA60-4F98-8A2E-B6171267288B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

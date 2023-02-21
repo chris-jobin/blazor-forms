@@ -1,4 +1,5 @@
-﻿using BlazorForm.Components.Forms.Attributes;
+﻿using BlazorForm.Components.Forms;
+using BlazorForm.Components.Forms.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BlazorForms.Shared.Models
 {
-    public class ContactInformationModel
+    public class ContactInformationModel : IFormable
     {
         [PhoneNumber]
         public string? CellPhone { get; set; }

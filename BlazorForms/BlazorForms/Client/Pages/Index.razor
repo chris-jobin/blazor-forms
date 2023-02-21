@@ -10,3 +10,5 @@ Welcome to your new app.
 <ContactForm @ref="ContactFormRef" Model="ContactModel"/>
 
 <button class="btn btn-primary" @onclick="@(() => ContactFormRef?.Validate())">Submit</button>
+
+<BlazorForm.Components.Forms.FormBuilder Model="ContactModel" />
